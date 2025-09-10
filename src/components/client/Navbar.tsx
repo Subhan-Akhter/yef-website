@@ -1,3 +1,4 @@
+// src/components/client/Navbar.tsx
 'use client';
 
 import { useState } from 'react';
@@ -55,7 +56,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-green-600">
+            <Link href="/" className="text-xl font-bold text-yef-blue">
               Youth Empowerment Foundation
             </Link>
           </div>
@@ -66,7 +67,7 @@ const Navbar = () => {
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
                   <>
-                    <button className="px-3 py-2 text-gray-700 hover:text-green-600 font-medium flex items-center">
+                    <button className="px-3 py-2 text-gray-700 hover:text-yef-blue font-medium flex items-center">
                       {item.name}
                       <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -77,7 +78,7 @@ const Navbar = () => {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-4 py-2 text-gray-700 hover:bg-green-50"
+                          className="block px-4 py-2 text-gray-700 hover:bg-yef-blue/10"
                         >
                           {subItem.name}
                         </Link>
@@ -88,7 +89,7 @@ const Navbar = () => {
                   <Link
                     href={item.href}
                     className={`px-3 py-2 font-medium ${
-                      pathname === item.href ? 'text-green-600' : 'text-gray-700 hover:text-green-600'
+                      pathname === item.href ? 'text-yef-blue' : 'text-gray-700 hover:text-yef-blue'
                     }`}
                   >
                     {item.name}
@@ -98,7 +99,7 @@ const Navbar = () => {
             ))}
             <Link
               href="/donate"
-              className="ml-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 font-medium transition-colors"
+              className="ml-4 px-4 py-2 bg-yef-blue text-white rounded-md hover:bg-yef-blue/90 font-medium transition-colors"
             >
               Donate
             </Link>
@@ -108,7 +109,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-green-600"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-yef-blue"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -135,7 +136,7 @@ const Navbar = () => {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-3 py-2 text-gray-600 hover:bg-green-50 rounded-md"
+                          className="block px-3 py-2 text-gray-600 hover:bg-yef-blue/10 rounded-md"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {subItem.name}
@@ -146,7 +147,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded-md font-medium"
+                    className="block px-3 py-2 text-gray-700 hover:bg-yef-blue/10 rounded-md font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -157,7 +158,7 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3">
               <Link
                 href="/donate"
-                className="block w-full text-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 font-medium"
+                className="block w-full text-center px-4 py-2 bg-yef-blue text-white rounded-md hover:bg-yef-blue/90 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Donate
