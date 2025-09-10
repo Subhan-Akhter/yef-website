@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -7,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Youth Empowerment Foundation',
-  description: 'Empowering youth through education and opportunities',
+  description: 'Empowering youth through education, skills development, and opportunities',
 };
 
 export default function RootLayout({
